@@ -95,7 +95,8 @@ mainScene.on("message", (ctx) => {
               
         })
         .catch(function (error) {
-          console.log(error);
+          // send error data to the user
+          ctx.replyWithHTML(`<b>${error.response.data.message}</b>`);
         });
     }
   }
