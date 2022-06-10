@@ -35,7 +35,7 @@ mainScene.on("message", (ctx) => {
       ctx.replyWithPhoto({ source: fs.createReadStream(path.join(__dirname, "../assets/photo_2021-08-04_08-35-19.jpg")) },
         {
           caption: "For using this bot you need to subscribe to our channel.\n\n" +
-            "After joining the channel, click on the button below to get access to th e bot.",
+            "After joining the channel, /start command will be available.\n\n",
           reply_markup: {
             inline_keyboard: [
               [
@@ -45,10 +45,6 @@ mainScene.on("message", (ctx) => {
                   switch_inline_query_current_chat: 'Join',
                   switch_inline_query: 'Join'
 
-                },
-                {
-                  text: '✅ Subscribed',
-                  callback_data: 'subscribe'
                 }
               ]
             ]
