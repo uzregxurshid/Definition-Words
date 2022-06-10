@@ -10,9 +10,9 @@ mainScene.enter((ctx) => {
   ctx.reply('I help you to get definition of words.\n\n' +
     'Enter word to get definition.\n\n' +
     'You can also use /start to get back to this menu.\n\n' +
-    'You can also use /help to get help.', Markup.keyboard([
-      ['📖 Help', '📌 About']
-    ]).oneTime().resize());
+    'You can also use /help to get help.',
+    Markup.removeKeyboard()
+      .oneTime())
 
 });
 
